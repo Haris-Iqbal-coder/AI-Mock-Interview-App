@@ -34,8 +34,10 @@ export default function Page() {
             </h2>
 
             <p className="mt-4 leading-relaxed text-white/90">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              nam dolorum aliquam, quibusdam aperiam voluptatum.
+              This AI-powered platform helps you prepare for job interviews by
+              simulating real interview scenarios. Practice your answers,
+              receive instant feedback, and enhance your skills to ace your next
+              interview.
             </p>
           </div>
         </section>
@@ -70,7 +72,7 @@ export default function Page() {
                 Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
               </p>
             </div>
-            <SignIn />;
+            <SignIn />
           </div>
         </main>
       </div>
