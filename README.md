@@ -1,4 +1,4 @@
-# AI Mock Interview Platform
+# Overview
 
 This AI-powered platform is designed to help you prepare for job interviews by simulating real interview scenarios. Practice your responses, receive instant feedback, and refine your skills to ace your next interview with confidence.
 
