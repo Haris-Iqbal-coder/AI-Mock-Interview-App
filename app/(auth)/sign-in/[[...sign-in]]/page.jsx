@@ -1,9 +1,19 @@
-import { SignIn } from "@clerk/nextjs";
+"use client";
+import { SignIn, useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Page() {
+  const { user } = useUser();
+  const router = useRouter();
 
-    
-  return (
+  useEffect(() => {
+    if (user) {
+      router.push("/dashboard"); // Redirect to the dashboard if already signed in
+    }
+  }, [user, router]);
+
+  return user ? null : (
     <section className="bg-white">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
         <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
@@ -64,12 +74,14 @@ export default function Page() {
               </a>
 
               <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                Welcome to Squid 🦑
+                Welcome to AI Mock Interview
               </h1>
 
               <p className="mt-4 leading-relaxed text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
+                This AI-powered platform helps you prepare for job interviews by
+                simulating real interview scenarios. Practice your answers,
+                receive instant feedback, and enhance your skills to ace your
+                next interview.
               </p>
             </div>
             <SignIn />
